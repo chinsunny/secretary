@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <import resource="spring-dao.xml" />
+
+    <bean name="competitionLogic" class="secretar.logic.CompetitionLogic" depends-on="lapDao">
+        <property name="competitionDao" ref="competitionDao" />
+        <property name="delegationDao" ref="delegationDao" />
+        <property name="teamDao" ref="teamDao" />
+        <property name="teamMemberDao" ref="teamMemberDao" />
+        <property name="groupDao" ref="groupDao"/>
+        <property name="competitionPartDao" ref="competitionPartDao"/>
+        <property name="distancePartDao" ref="distancePartDao"/>
+        <property name="distanceDao" ref="distanceDao"/>
+        <property name="lapPartDao" ref="lapPartDao" />
+        <property name="lapDao" ref="lapDao" />
+    </bean>
+
+    <bean name="scriptLogic" class="secretar.logic.ScriptLogic">
+        <property name="mandatParser" ref="mandatParser" />
+        <property name="competitionParser" ref="competitionParser" />
+        <property name="chipExporter" ref="chipExporter" />
+        <property name="resultsByGroup" ref="resultsByGroup" />
+    </bean>
+
+    <bean name="mandatParser" class="secretar.scripts.enter.MandatParser">
+        <property name="delegationDao" ref="delegationDao" />
+        <property name="teamDao" ref="teamDao" />
+        <property name="teamMemberDao" ref="teamMemberDao" />
+        <property name="groupDao" ref="groupDao"/>
+        <property name="competitionDao" ref="competitionDao" />
+        <property name="distanceDao" ref="distanceDao" />
+    </bean>
+
+    <bean name="resultsByGroup" class="secretar.scripts.results.ResultsByGroup">
+        <property name="distancePartDao" ref="distancePartDao" />
+        <property name="lapPartDao" ref="lapPartDao" />
+        <property name="competitionLogic" ref="competitionLogic" />
+    </bean>
+
+    <bean name="chipExporter" class="secretar.scripts.enter.ChipExporter">
+        <property name="distancePartDao" ref="distancePartDao" />
+    </bean>
+
+    <bean name="competitionParser" class="secretar.scripts.enter.CompetitionParser">
+        <property name="groupDao" ref="groupDao"/>
+        <property name="competitionDao" ref="competitionDao" />
+        <property name="distanceDao" ref="distanceDao" />
+        <property name="lapDao" ref="lapDao" />
+    </bean>
+
+    <bean name="mainFrame" class="secretar.ui.MainFrame" depends-on="delegationDao">
+        <property name="delegationDao" ref="delegationDao" />
+        <property name="scriptLogic" ref="scriptLogic" />
+        <property name="competitionLogic" ref="competitionLogic" />
+        <property name="teamDao" ref="teamDao" />
+        <property name="teamMemberDao" ref="teamMemberDao" />
+        <property name="distanceDao" ref="distanceDao" />
+        <property name="groupDao" ref="groupDao" />
+        <property name="lapDao" ref="lapDao" />
+        <property name="distancePartDao" ref="distancePartDao"/>
+        <property name="lapPartDao" ref="lapPartDao" />
+    </bean>
+</beans>

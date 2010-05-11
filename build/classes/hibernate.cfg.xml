@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+      <mapping class="secretar.objects.Delegation" />
+      <mapping class="secretar.objects.Team" />
+      <mapping class="secretar.objects.TeamMember" />
+      <mapping class="secretar.objects.Competition" />
+      <mapping class="secretar.objects.Distance" />
+      <mapping class="secretar.objects.Lap" />
+      <mapping class="secretar.objects.CompetitionPart" />
+      <mapping class="secretar.objects.DistancePart" />
+      <mapping class="secretar.objects.LapPart" />
+      <mapping class="secretar.objects.Group" />
+  </session-factory>
+</hibernate-configuration>

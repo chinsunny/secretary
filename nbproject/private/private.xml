@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/sfilatov/Projects/tursamara/src/hibernate.properties</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/jdbc.properties</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/scripts/enter/MandatParser.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/scripts/ScriptUtils.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/spring-context.xml</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/logic/ScriptLogic.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/Main.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/hibernate.cfg.xml</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/objects/DistancePart.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/objects/LapPart.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/objects/Team.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/objects/TeamMember.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/objects/Lap.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/objects/Competition.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/constants/Gender.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/dao/CompetitionDao.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/dao/CompetitionPartDao.java</file>
+        <file>file:/home/sfilatov/Projects/tursamara/src/secretar/logic/CompetitionLogic.java</file>
+    </open-files>
+</project-private>
